@@ -13,6 +13,30 @@ namespace Rgp.TvSeries.Data.V1.Mappings
 
             builder.HasKey(x => x.Id);
             builder.ToTable("TvSeries");
+
+            builder.HasData
+            (
+                new Core.Entities.TvSeries
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Title = "Breaking Bad",
+                    Summary = "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future."
+                },
+
+                new Core.Entities.TvSeries
+                {
+                    Id= Guid.NewGuid().ToString(),
+                    Title = "Stranger Things",
+                    Summary = "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back."
+                },
+
+                new Core.Entities.TvSeries
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Title = "Lost",
+                    Summary = "The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island."
+                }
+            );
         }
     }
 }
