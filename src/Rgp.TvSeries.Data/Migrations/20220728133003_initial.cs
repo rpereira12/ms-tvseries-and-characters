@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Rgp.TvSeries.API.Migrations
+namespace Rgp.TvSeries.Data.Migrations
 {
     public partial class initial : Migration
     {
@@ -24,17 +24,17 @@ namespace Rgp.TvSeries.API.Migrations
             migrationBuilder.InsertData(
                 table: "TvSeries",
                 columns: new[] { "Id", "Summary", "Title" },
-                values: new object[] { "082c5128-33a0-4373-8eda-ecb329947fa6", "The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.", "Lost" });
+                values: new object[] { "5c095b53-8c7d-4d22-9ecc-65f3a50ac216", "The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.", "Lost" });
 
             migrationBuilder.InsertData(
                 table: "TvSeries",
                 columns: new[] { "Id", "Summary", "Title" },
-                values: new object[] { "17a9efe3-1b70-48dc-af3a-55615f54bca6", "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.", "Stranger Things" });
+                values: new object[] { "b359f834-4a89-4d21-be97-fe6577708472", "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.", "Stranger Things" });
 
             migrationBuilder.InsertData(
                 table: "TvSeries",
                 columns: new[] { "Id", "Summary", "Title" },
-                values: new object[] { "c74503d1-b354-4483-97df-a071b24c320a", "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.", "Breaking Bad" });
+                values: new object[] { "d641c48b-eea7-4a5e-900f-3f8677dd76f9", "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.", "Breaking Bad" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

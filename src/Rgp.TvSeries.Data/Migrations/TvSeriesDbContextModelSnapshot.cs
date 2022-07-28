@@ -2,19 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Rgp.TvSeries.Data.V1.Db;
 
 #nullable disable
 
-namespace Rgp.TvSeries.API.Migrations
+namespace Rgp.TvSeries.Data.Migrations
 {
     [DbContext(typeof(TvSeriesDbContext))]
-    [Migration("20220727205148_initial")]
-    partial class initial
+    partial class TvSeriesDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,19 +41,19 @@ namespace Rgp.TvSeries.API.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c74503d1-b354-4483-97df-a071b24c320a",
+                            Id = "d641c48b-eea7-4a5e-900f-3f8677dd76f9",
                             Summary = "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
                             Title = "Breaking Bad"
                         },
                         new
                         {
-                            Id = "17a9efe3-1b70-48dc-af3a-55615f54bca6",
+                            Id = "b359f834-4a89-4d21-be97-fe6577708472",
                             Summary = "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.",
                             Title = "Stranger Things"
                         },
                         new
                         {
-                            Id = "082c5128-33a0-4373-8eda-ecb329947fa6",
+                            Id = "5c095b53-8c7d-4d22-9ecc-65f3a50ac216",
                             Summary = "The survivors of a plane crash are forced to work together in order to survive on a seemingly deserted tropical island.",
                             Title = "Lost"
                         });

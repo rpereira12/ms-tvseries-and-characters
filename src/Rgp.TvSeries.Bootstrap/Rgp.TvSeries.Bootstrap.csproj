@@ -13,4 +13,10 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Rgp.TvSeries.Application\Rgp.TvSeries.Application.csproj" />
+    <ProjectReference Include="..\Rgp.TvSeries.Core\Rgp.TvSeries.Core.csproj" />
+    <ProjectReference Include="..\Rgp.TvSeries.Data\Rgp.TvSeries.Data.csproj" />
+  </ItemGroup>
+
 </Project>

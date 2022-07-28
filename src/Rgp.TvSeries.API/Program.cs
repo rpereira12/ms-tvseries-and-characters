@@ -1,6 +1,4 @@
-using Microsoft.EntityFrameworkCore;
-using Rgp.TvSeries.API.MigrationManager;
-using Rgp.TvSeries.Data.V1.Db;
+using Rgp.TvSeries.Bootstrap;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,10 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connectionString = builder.Configuration.GetConnectionString("WebApiDatabase");
-builder.Services.AddDbContext<TvSeriesDbContext>(opts =>
-        opts.UseSqlServer(connectionString,
-            options => options.MigrationsAssembly("Rgp.TvSeries.API")));
+ServicesConfiguration.ConfigureServices(builder.Services, builder.Configuration);
 
 var app = builder.Build();
 
@@ -31,5 +26,4 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MigrateDatabase();
 app.Run();
