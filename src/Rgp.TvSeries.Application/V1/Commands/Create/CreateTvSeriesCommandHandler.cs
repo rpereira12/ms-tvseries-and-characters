@@ -26,7 +26,7 @@ namespace Rgp.TvSeries.Application.V1.Commands.Create
             var tvSerie = CreateTvSeries(request);
             await _repository.Create(tvSerie);
 
-            result.Data = tvSerie.Id;
+            result.Data = new CreateTvSeriesCommandResponse(tvSerie.Id);
 
             return await Task.FromResult(result);
         }

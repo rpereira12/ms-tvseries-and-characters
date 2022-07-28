@@ -7,16 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Rgp.TvSeries.Bootstrap\Rgp.TvSeries.Bootstrap.csproj" />
     <ProjectReference Include="..\Rgp.TvSeries.Data\Rgp.TvSeries.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
