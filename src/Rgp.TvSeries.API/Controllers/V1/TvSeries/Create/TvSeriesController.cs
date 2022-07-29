@@ -14,7 +14,7 @@ namespace Rgp.TvSeries.API.Controllers.V1.TvSeries
             var result = await _mediator.Send(command);
 
             if (!result.IsValid)
-                return BadRequest();
+                return BadRequest(result);
             
             return Ok(result);
         }

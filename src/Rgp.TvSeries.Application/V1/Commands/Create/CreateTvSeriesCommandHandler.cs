@@ -14,21 +14,13 @@ namespace Rgp.TvSeries.Application.V1.Commands.Create
 
         public override async Task<Result> Handle(CreateTvSeriesCommand request, CancellationToken cancellationToken)
         {
-            var result = new Result();
-            var validationResult = new CreateTvSeriesValidation().Validate(request);
-
-            if (!validationResult.IsValid)
-            {
-                result.AddValidationErrors(validationResult.Errors);
-                return await Task.FromResult(result);
-            }
             
             var tvSerie = CreateTvSeries(request);
             await _repository.Create(tvSerie);
 
-            result.Data = new CreateTvSeriesCommandResponse(tvSerie.Id);
+            Result.Data = new CreateTvSeriesCommandResponse(tvSerie.Id);
 
-            return await Task.FromResult(result);
+            return await Task.FromResult(Result);
         }
 
         private Core.Entities.TvSeries CreateTvSeries(CreateTvSeriesCommand request)
