@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
+using Rgp.TvSeries.CrossCutting.Error;
 using Rgp.TvSeries.Application.V1.Base;
 
 namespace Rgp.TvSeries.Bootstrap.Pipelines
@@ -21,19 +22,23 @@ namespace Rgp.TvSeries.Bootstrap.Pipelines
             CancellationToken cancellationToken,
             RequestHandlerDelegate<TResponse> next)
         {
-            var errors = _validators
-                .Select(v => v.Validate(request))
-                .SelectMany(result => result.Errors)
-                .Where(f => f != null)
-                .ToList();
-            return errors.Any() ? ErrorHandlerAsync(errors) : next();
+            var errorCode = ErrorCode.BadRequest;
+            var erros = _validators
+               .Select(v => v.Validate(request))
+               .SelectMany(result => result.Errors)
+               .Where(f => f != null)
+               .ToList();
+            return erros.Any() ? ErrorHandlerAsync(erros, errorCode) : next();
         }
 
-        private static async Task<TResponse> ErrorHandlerAsync(IEnumerable<ValidationFailure> validationFail)
+        private static async Task<TResponse> ErrorHandlerAsync(IEnumerable<ValidationFailure> validationFail,
+            ErrorCode errorCode)
         {
             var response = new TResponse();
 
-            response.AddValidationErrors(validationFail.ToList());
+            response.AddValidationErrors(validationFail.Select(a => new ErrorCatalogEntry(a.ErrorCode,
+                a.ErrorMessage,
+                a.PropertyName)).ToList(), errorCode);
 
             return await Task.FromResult(response);
         }

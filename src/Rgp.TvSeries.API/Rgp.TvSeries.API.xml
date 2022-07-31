@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rgp.TvSeries.API</name>
+    </assembly>
+    <members>
+        <member name="M:Rgp.TvSeries.API.Controllers.V1.TvSeries.TvSeriesController.Post(Rgp.TvSeries.Application.V1.Commands.Create.CreateTvSeriesCommand)">
+            <summary>
+              Create a new TV Series
+            </summary>
+            <param name="request">The TV Series JSON represetation you want to create</param>
+            <returns>Returns an object of type DefaultResult that could be a SuccessResult or FailureResult containing information about the request</returns>
+            <response code ="201">Returns a SuccessResult with the ID of the new TV Series in the data field.</response>
+            <response code ="400">Returns a FailureResult with a list of errors.</response>
+            <response code ="500">Returns a FailureResult with a list of errors.</response>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rgp.TvSeries.API</name>
+    </assembly>
+    <members>
+        <member name="M:Rgp.TvSeries.API.Controllers.V1.TvSeries.TvSeriesController.CreateValueV1Async(Rgp.TvSeries.API.Controllers.V1.TvSeries.Create.CreateTvSeriesRequest)">
+            <summary>
+              Create a new TV Series
+            </summary>
+            <param name="request">The TV Series object you want to create</param>
+            <returns>An ActionResult</returns>
+        </member>
+    </members>
+</doc>

@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Rgp.TvSeries.Core\Rgp.TvSeries.Core.csproj" />
+    <ProjectReference Include="..\Rgp.TvSeries.CrossCutting\Rgp.TvSeries.CrossCutting.csproj" />
   </ItemGroup>
 
 </Project>
