@@ -19,6 +19,12 @@ namespace Rgp.TvSeries.Data.V1.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task Delete(Core.Entities.TvSeries tvSeries)
+        {
+            _context.Remove(tvSeries);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<List<Core.Entities.TvSeries>> GetAll()
         {
             return await _context.TvSeries.ToListAsync();
@@ -27,6 +33,12 @@ namespace Rgp.TvSeries.Data.V1.Repositories
         public async Task<Core.Entities.TvSeries> GetById(string id)
         {
             return await _context.TvSeries.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task Update(Core.Entities.TvSeries tvSeries)
+        {
+            _context.Update(tvSeries);
+            await _context.SaveChangesAsync();
         }
     }
 }

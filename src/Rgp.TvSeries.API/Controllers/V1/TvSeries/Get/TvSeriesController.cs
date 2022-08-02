@@ -8,7 +8,7 @@ namespace Rgp.TvSeries.API.Controllers.V1.TvSeries
     public partial class TvSeriesController
     {
         /// <summary>
-        ///   Create a new TV Series
+        ///   Get all TV Series registered
         /// </summary>
         /// <returns>Returns an object of type DefaultResult that could be a SuccessResult or FailureResult containing information about the request</returns>
         /// <response code ="200">Returns a SuccessResult a list all TV Series registered.</response>

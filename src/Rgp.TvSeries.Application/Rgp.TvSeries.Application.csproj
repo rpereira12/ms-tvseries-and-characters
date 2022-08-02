@@ -16,4 +16,8 @@
     <ProjectReference Include="..\Rgp.TvSeries.CrossCutting\Rgp.TvSeries.CrossCutting.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="V1\Commands\Update\PatchUpdate\" />
+  </ItemGroup>
+
 </Project>

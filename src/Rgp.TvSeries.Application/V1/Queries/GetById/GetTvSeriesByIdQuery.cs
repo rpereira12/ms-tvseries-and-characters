@@ -1,4 +1,5 @@
 ﻿using Rgp.TvSeries.Application.Base;
+using System.ComponentModel.DataAnnotations;
 
 namespace Rgp.TvSeries.Application.V1.Commands.Queries.GetById
 {
@@ -9,6 +10,12 @@ namespace Rgp.TvSeries.Application.V1.Commands.Queries.GetById
             Id = id;
         }
 
+        /// <summary>
+        /// ID of the TV Series
+        /// </summary>
+        [Required(ErrorMessage = "The ID is required.")]
+        [MinLength(36)]
+        [MaxLength(36)]
         public string Id { get; set; }
 
     }

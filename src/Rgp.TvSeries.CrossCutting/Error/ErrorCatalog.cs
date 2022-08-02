@@ -47,8 +47,11 @@
             public static ErrorCatalogEntry CodeCanBeNegativeNumber =>
                 ("TEMPLATE-CREATE-03", "[code] parameter cant be -1");
 
-            public static ErrorCatalogEntry DescriptionMinLenght =>
-                ("TEMPLATE-CREATE-04", "[description] parameter cant be null or empty");
+            public static ErrorCatalogEntry CraeteDescriptionIsTooShort =>
+                ("TEMPLATE-CREATE-04", "[description] parameter is too short");
+
+            public static ErrorCatalogEntry CraeteDescriptionIsTooLong =>
+                ("TEMPLATE-CREATE-05", "[description] parameter is too long");
 
             #endregion Create
         }

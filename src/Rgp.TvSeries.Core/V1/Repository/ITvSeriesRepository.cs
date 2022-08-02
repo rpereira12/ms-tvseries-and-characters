@@ -5,5 +5,7 @@
         Task Create(Entities.TvSeries tvSeries);
         Task<List<Entities.TvSeries>> GetAll();
         Task<Entities.TvSeries> GetById(string id);
+        Task Update(Entities.TvSeries tvSeries);
+        Task Delete(Entities.TvSeries tvSeries);
     }
 }
