@@ -1,4 +1,5 @@
-﻿using Rgp.TvSeries.Core.V1.Repository;
+﻿using Microsoft.EntityFrameworkCore;
+using Rgp.TvSeries.Core.V1.Repository;
 using Rgp.TvSeries.Data.V1.Db;
 
 namespace Rgp.TvSeries.Data.V1.Repositories
@@ -16,6 +17,16 @@ namespace Rgp.TvSeries.Data.V1.Repositories
         {
             await _context.AddAsync(tvSeries);
             await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<Core.Entities.TvSeries>> GetAll()
+        {
+            return await _context.TvSeries.ToListAsync();
+        }
+
+        public async Task<Core.Entities.TvSeries> GetById(string id)
+        {
+            return await _context.TvSeries.FirstOrDefaultAsync(x => x.Id == id);
         }
     }
 }

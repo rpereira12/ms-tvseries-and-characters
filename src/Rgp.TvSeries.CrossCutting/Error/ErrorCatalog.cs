@@ -24,6 +24,9 @@
             public static ErrorCatalogEntry GetCodeIsNullOrEmpty =>
                 ("TEMPLATE-GET-01", "[code] parameter cant be null or empty");
 
+            public static ErrorCatalogEntry ListIsEmpty =>
+                ("TEMPLATE-GET-02", "No registers was found");
+
             #endregion Get
 
             #region GetById
