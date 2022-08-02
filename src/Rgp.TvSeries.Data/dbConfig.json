@@ -1,5 +1,5 @@
 ﻿{
   "ConnectionStrings": {
-    "dbConnection": "Data Source=localhost,1433; USER ID=SA; Password=Admin@789; Initial Catalog=TVSeriesDB; Integrated Security=false"
+    "dbConnection": "Data Source=sqldata; USER ID=SA; Password=Admin@789; Initial Catalog=TVSeriesDB; Integrated Security=false"
   }
 }

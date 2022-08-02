@@ -1,3 +1,4 @@
+using Rgp.TvSeries.API.MigrationManager;
 using Rgp.TvSeries.Bootstrap;
 using System.Reflection;
 
@@ -47,4 +48,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MigrateDatabase();
 app.Run();

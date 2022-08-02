@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  rgp.tvseries.api:
+    image: ${DOCKER_REGISTRY-}rgptvseriesapi
+    build:
+      context: .
+      dockerfile: Rgp.TvSeries.API/Dockerfile
+    ports:
+      - "8081:80"
+    depends_on:
+      - sqldata
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - SA_PASSWORD=Admin@789
+      - ACCEPT_EULA=Y
+    ports:
+      - "1450:1433"

@@ -16,7 +16,7 @@
         </member>
         <member name="M:Rgp.TvSeries.API.Controllers.V1.TvSeries.TvSeriesController.Delete(System.String)">
             <summary>
-              Update an existing TV Series register
+              Delete an existing TV Series register
             </summary>
             <param name="id">The TV Series ID you wanna Delete</param>
             <returns>Returns an object of type DefaultResult that could be a SuccessResult or FailureResult containing information about the request</returns>
